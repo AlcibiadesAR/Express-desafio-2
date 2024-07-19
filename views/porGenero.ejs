@@ -1,0 +1,16 @@
+<%- include('partials/head', { pageTitle: 'title' }) %>
+
+<h1><%= title %> <%= listaPorGenero[0].genero %></h1>
+
+<ol>
+<% for(let porGenero of listaPorGenero) { %>
+<li class="genero">
+<a href="/bandas/id/<%= porGenero.id%>">Nombre: <%= porGenero.nombre %></a>
+<p>Integrantes de grupo: <%= porGenero.integrantes %></p>
+<p> Género: <%= porGenero.genero %></p>
+<p>Top Canciones: <%= porGenero.topCanciones %></p>
+<img src="/<%= porGenero.cover%>" alt="<%= porGenero.nombre %>">
+<a href="<%= porGenero.video %>" >Ver Aquí: <%= porGenero.video %></a>
+</li>
+<% } %>
+</ol>

@@ -1,0 +1,11 @@
+<%- include('partials/head', { pageTitle: 'title' }) %>
+
+<h1><%= title %></h1>
+<ol>
+<% for(let items of lista) { %>
+  <li>
+  <a href="/bandas/id/<%= items.id%>"><%= items.nombre %></a>
+  <img src="<%= items.cover%>" alt="<%=items.nombre%>">
+  <% } %>
+</li>
+</ol>

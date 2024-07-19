@@ -1,0 +1,10 @@
+<%- include('partials/head', { pageTitle: 'title' }) %>
+
+<h1><%= title %> de la banda <%= detalles.nombre %> </h1>
+
+<p>Integrantes de grupo: <%= detalles.integrantes %></p>
+<a href="/bandas/genero/<%= detalles.genero %>">Género: <%= detalles.genero %></a>
+<p>Top Canciones: <%= detalles.topCanciones %></p>
+<img src="/<%= detalles.cover%>" alt="<%= detalles.nombre %>">
+<a href="<%= detalles.video %>">Ver Aquí: <%= detalles.video %></a>
+
